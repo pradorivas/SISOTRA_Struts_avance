@@ -9,7 +9,6 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
@@ -18,7 +17,7 @@
         <s:form action="EVregistrarOT">           
             <s:textfield key="formulario.nombre" name="ordenTrabajo.IdOrdenT"/>
             <s:textfield key="formulario.apellido" name="ordenTrabajo.Descripcion"/>
-            <s:submit key="formulario.boton"/>
+            <s:submit key="formulario.registro"/>
         </s:form>
         
         <p><s:actionmessage/></p>

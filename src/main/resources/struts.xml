@@ -29,7 +29,7 @@
                  method="logout">
             <result name="login">/login.jsp</result>
         </action>
-        <action name="InicioRegistroOT" 
+        <action name="inicioRegistroOT" 
                  class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
                  method="registroOT">
             <result type="tiles">d_REGISTRO_OT</result>
@@ -41,7 +41,7 @@
             <result name="input" type="tiles">d_REGISTRO_OT</result>
         </action>
         
-        <action name="ListadoOT"
+        <action name="listadoOT"
                  class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
                  method="execute">
             <result type="tiles">d_LISTADO_OT</result>

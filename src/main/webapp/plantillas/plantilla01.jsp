@@ -14,8 +14,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-        <table>
+    <center>
+        <table border="1">
 		<tr>
 			<td colspan="2">
 				<!-- CABECERA -->
@@ -41,6 +41,6 @@
 	
 	
 	</table>
-    
+    </center>
     </body>
 </html>

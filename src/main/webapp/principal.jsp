@@ -3,7 +3,6 @@
     Created on : 2/11/2012, 11:04:45 AM
     Author     : portatil
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@taglib prefix="s" uri="/struts-tags"%>
@@ -13,14 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1><s:text name="titulo.principal"/></h1>
-        
-        <p style="width: 400px">
+        <p style="width: 400px;height: 100px">
             <s:text name="titulo.bienvenida"/>
         </p>
-        
-       
-       
-
     </body>
 </html>

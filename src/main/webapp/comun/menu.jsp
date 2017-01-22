@@ -6,11 +6,11 @@
                       <s:a href="%{salir}"><s:text name="enlace.logout"/> </s:a>
                 </li>
                 <li>
-                      <s:url action="InicioRegistroOT" id="newOT"/>
-                      <s:a href="%{newOT}"><s:text name="enlace.OT.nuevo"/></s:a>
+                      <s:url action="inicioRegistroOT" id="newOT"/>
+                      <s:a href="%{newOT}"><s:text name="enlace.OTnuevo"/></s:a>
                 </li>
                 <li>
-                    <s:url action="ListadoOT" id="newLista_ot"/>
+                    <s:url action="listadoOT" id="newLista_ot"/>
                       <s:a href="%{newLista_ot}"><s:text name="enlace.OT.listado"/></s:a>
                 </li>
                 <li>

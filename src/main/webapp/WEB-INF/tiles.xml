@@ -19,12 +19,12 @@
         
         <definition name="d_REGISTRO_OT" extends="d_principal">	
 	      	<put-attribute name="cuerpo" 
-	                     value="/clientes/registrarOT.jsp"/>	
+	                     value="/registrarOT.jsp"/>	
 	</definition>
 
         <definition name="d_LISTADO_OT" extends="d_principal">	
 	      	<put-attribute name="cuerpo" 
-	                     value="/clientes/ListadoOT.jsp"/>	
+	                     value="/ListadoOT.jsp"/>	
 	</definition>
 
 </tiles-definitions>
