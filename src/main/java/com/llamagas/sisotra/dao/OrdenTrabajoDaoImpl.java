@@ -26,9 +26,9 @@ public class OrdenTrabajoDaoImpl implements OrdenTrabajoDao {
     }
 
     @Override
-    public void eliminarSegun(OrdenTrabajo OrdTra) {
+    public void eliminarSegun(String c) {
         //String idOT = OrdTra.getIdOrdenT().trim();
-        Contenedor.ORDEN_TRABAJO.remove(OrdTra.getIdOrdenT().trim());
+        Contenedor.ORDEN_TRABAJO.remove(c);
     }
 
     @Override
@@ -49,8 +49,16 @@ public class OrdenTrabajoDaoImpl implements OrdenTrabajoDao {
         Contenedor.ORDEN_TRABAJO.put(OrdTra.getIdOrdenT(), OrdTra);
     }
 
+    @Override
+    public OrdenTrabajo ObtenerOT(String c) {
+        OrdenTrabajo getOT = Contenedor.ORDEN_TRABAJO.get(c);
+        return getOT;
+    }
+
     private static class Contenedor {
+
         // private static List<OrdenTrabajo> ddd = new LinkedList<OrdenTrabajo>();
-        private static Map ORDEN_TRABAJO = new HashMap<>();
+
+        private static Map<String, OrdenTrabajo> ORDEN_TRABAJO = new HashMap<>();
     }
 }

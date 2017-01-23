@@ -18,9 +18,11 @@ public interface OrdenTrabajoDao {
 
     void actualizar(OrdenTrabajo OrdTra);
 
-    void eliminarSegun(OrdenTrabajo OrdTra);
+    void eliminarSegun(String cod);
 
     List<OrdenTrabajo> listarTodo();
 
     void Asignar(OrdenTrabajo OrdTra);
+
+    OrdenTrabajo ObtenerOT(String c);
 }

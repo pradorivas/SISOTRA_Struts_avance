@@ -10,16 +10,18 @@
 <html>
     <head>
         <title>JSP Page</title>
+        <s:head/>
     </head>
-    <body>
-        <h1><s:text name="formulario.titulo.nuevo"/></h1>
+    <body><center>
+        <h2><s:text name="formulario.titulo.nuevo"/></h2>
         
-        <s:form action="EVregistrarOT">           
-            <s:textfield key="formulario.nombre" name="ordenTrabajo.IdOrdenT"/>
-            <s:textfield key="formulario.apellido" name="ordenTrabajo.Descripcion"/>
+        <s:form action="EVregistrarOT" method="post">           
+            <s:textfield key="formulario.OT" name="ordenTrabajo.IdOrdenT"/>
+            <s:textfield key="formulario.descripcionOT" name="ordenTrabajo.Descripcion"/>
             <s:submit key="formulario.registro"/>
+            <s:reset key="Limpiar"/>
         </s:form>
-        
+    </center>
         <p><s:actionmessage/></p>
     </body>
 </html>

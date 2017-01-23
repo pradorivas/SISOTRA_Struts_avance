@@ -15,7 +15,7 @@
     </head>
     <body>
     <center>
-        <table border="1">
+        <table border="0">
 		<tr>
 			<td colspan="2">
 				<!-- CABECERA -->

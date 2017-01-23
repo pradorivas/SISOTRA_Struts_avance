@@ -26,5 +26,10 @@
 	      	<put-attribute name="cuerpo" 
 	                     value="/ListadoOT.jsp"/>	
 	</definition>
+        
+        <definition name="d_modificar_OT" extends="d_principal">	
+	      	<put-attribute name="cuerpo" 
+	                     value="/editarOT.jsp"/>	
+	</definition>
 
 </tiles-definitions>

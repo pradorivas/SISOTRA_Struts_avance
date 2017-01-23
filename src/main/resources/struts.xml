@@ -43,9 +43,31 @@
         
         <action name="listadoOT"
                  class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
-                 method="execute">
+                 method="ListarOT">
             <result type="tiles">d_LISTADO_OT</result>
             <result name="input" type="tiles">d_REGISTRO_OT</result>
         </action>
+        
+        <action name="deleteOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="eliminarOrdenTrabajo">
+            <result type="tiles">d_LISTADO_OT</result>
+            <result name="input" type="tiles">d_REGISTRO_OT</result>
+        </action>
+        
+        <action name="modificarOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="getOT">
+            <result type="tiles">d_modificar_OT</result>
+            <result name="input" type="tiles">d_LISTADO_OT</result>
+        </action>
+        
+        <action name="EVeditarOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="modificarOrdenTrabajo">
+            <result type="tiles">d_LISTADO_OT</result>
+            <result name="input" type="tiles">d_modificar_OT</result>
+        </action>
+        
     </package>
 </struts>
