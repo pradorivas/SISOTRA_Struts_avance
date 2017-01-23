@@ -9,7 +9,7 @@
 <%@taglib prefix="s" uri="/struts-tags"%>
 <html>
     <head>
-        <title>JSP Page</title>
+        <title> JSP Page</title>
     </head>
     <body><center>
         <h2>Listado OT</h2>
