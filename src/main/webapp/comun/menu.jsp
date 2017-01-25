@@ -7,7 +7,7 @@
     </li>
     <s:set var="cod" value="%#sesion.get('user')" scope="page"/>
     <s:if test="%{#attr.cod=='jefeflota' || #attr.cod=='admin'}">
-    <li>
+    <li> 
         <s:url action="inicioRegistroOT" id="newOT"/>
         <s:a href="%{newOT}"><s:text name="enlace.OTnuevo"/></s:a>
     </li>
