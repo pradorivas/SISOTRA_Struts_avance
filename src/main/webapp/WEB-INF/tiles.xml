@@ -32,4 +32,17 @@
 	                     value="/editarOT.jsp"/>	
 	</definition>
 
+        <definition name="d_inicioAsignar_OT" extends="d_principal">	
+	      	<put-attribute name="cuerpo" 
+	                     value="/asignarOT.jsp"/>	
+	</definition>
+        <definition name="d_registroEstado_OT" extends="d_principal">	
+	      	<put-attribute name="cuerpo" 
+	                     value="/CambiarestadoOT.jsp"/>	
+	</definition>
+        
+        <definition name="d_ListaAsignaciones_OT" extends="d_principal">	
+	      	<put-attribute name="cuerpo" 
+	                     value="/Lista_adquisiciones.jsp"/>	
+	</definition>
 </tiles-definitions>

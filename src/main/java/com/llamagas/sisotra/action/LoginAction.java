@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 package com.llamagas.sisotra.action;
+
 import com.llamagas.sisotra.modelo.Usuario;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.Map;
 import org.apache.struts2.dispatcher.SessionMap;
 
-public class LoginAction extends ActionSupport {
+public class LoginAction extends ActionSupport{
 
-    private Usuario usuario;
+    public Usuario usuario;
+    //public Map sesio;
 
     public Usuario getUsuario() {
         return usuario;
@@ -23,14 +25,14 @@ public class LoginAction extends ActionSupport {
     }
 
     public String login() throws Exception {
-        if ((usuario.getUsername().equals("jefeflota") && usuario.getPassword().equals("jsf")) || 
-                (usuario.getUsername().equals("jefetaller") && usuario.getPassword().equals("jsf")) || 
-                (usuario.getUsername().equals("admin") && usuario.getPassword().equals("jsf"))
-               ) {
+        if ((usuario.getUsername().equals("jefeflota") && usuario.getPassword().equals("123"))
+                || (usuario.getUsername().equals("jefetaller") && usuario.getPassword().equals("123"))
+                || (usuario.getUsername().equals("admin") && usuario.getPassword().equals("123"))) {
             //obtenemos sesion
             Map sesion = ActionContext.getContext().getSession();
             //guardamos objetos en sesion
-            sesion.put("usuario", getUsuario().getUsername());
+            sesion.put("user", getUsuario().getUsername());
+            //setSession(sesion);
             addActionMessage(getText("login.ok"));
             return SUCCESS;
         } else {
@@ -47,7 +49,7 @@ public class LoginAction extends ActionSupport {
         return LOGIN;
     }
 
-    public String inicio(){
+    public String inicio() {
         return LOGIN;
     }
 
@@ -67,4 +69,5 @@ public class LoginAction extends ActionSupport {
         }
 
     }
+
 }

@@ -18,7 +18,8 @@
         <s:form action="EVregistrarOT" method="post">           
             <s:textfield key="formulario.OT" name="ordenTrabajo.IdOrdenT"/>
             <s:textfield key="formulario.descripcionOT" name="ordenTrabajo.Descripcion"/>
-            <s:submit key="formulario.registro"/>
+            <s:submit value="%{getText('formulario.registro')}"/>
+            
             <s:reset key="Limpiar"/>
         </s:form>
     </center>

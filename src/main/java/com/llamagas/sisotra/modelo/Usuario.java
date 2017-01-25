@@ -10,9 +10,14 @@ import java.io.Serializable;
  *
  * @author portatil
  */
-public class Usuario implements Serializable{
-    private String username;
-    private String password;
+public class Usuario implements Serializable {
+
+    private static String username;
+    private static String password;
+
+    public Usuario() {
+       
+    }
 
     public String getUsername() {
         return username;
@@ -29,5 +34,5 @@ public class Usuario implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
 }

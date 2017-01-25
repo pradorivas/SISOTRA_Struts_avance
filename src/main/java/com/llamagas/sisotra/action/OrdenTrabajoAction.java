@@ -1,22 +1,23 @@
 package com.llamagas.sisotra.action;
 
+
 import com.llamagas.sisotra.dao.OrdenTrabajoDao;
 import com.llamagas.sisotra.dao.OrdenTrabajoDaoImpl;
 import com.llamagas.sisotra.modelo.OrdenTrabajo;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-/**
- *
- * @author DENIS
- */
+
 public class OrdenTrabajoAction extends ActionSupport {
 
     public OrdenTrabajo ordenTrabajo = new OrdenTrabajo();
     public String mensaje;
     public List<OrdenTrabajo> listaOT = new ArrayList<>();
     public String cod;
+    public Map listaArea;
 
     public OrdenTrabajo getOrdenTrabajo() {
         return ordenTrabajo;
@@ -53,6 +54,16 @@ public class OrdenTrabajoAction extends ActionSupport {
         ordenTrabajo = dao.ObtenerOT(cod);
         return SUCCESS;
     }
+    
+    public String getasignarOT() throws Exception{
+        OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
+        ordenTrabajo = dao.ObtenerOT(cod);
+        listaArea = new HashMap();
+        listaArea.put("MECANICA", "MECANICA");
+        listaArea.put("ELECTRICIDAD", "ELECTRICIDAD");
+        listaArea.put("PINTURA", "PINTURA");
+        return SUCCESS;
+    }
 
     public String modificarOrdenTrabajo() {
         OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
@@ -68,12 +79,26 @@ public class OrdenTrabajoAction extends ActionSupport {
         return SUCCESS;
     }
 
-    public void asignarOrdenTrabajo() {
-        OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
-        dao.Asignar(ordenTrabajo);
+    public String registroOT() throws Exception {
+        return SUCCESS;
     }
 
-    public String registroOT() throws Exception {
+    public String iniciarAsignacionOT() {
+        OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
+        listaOT = dao.listarTodo();
+        return SUCCESS;
+    }
+
+    public String asignarOT() {
+        OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
+        dao.Asignar(ordenTrabajo);
+        listaOT = dao.listarTodo();
+        return SUCCESS;
+    }
+
+    public String detalleAsignacionOT() {
+        OrdenTrabajoDao dao = new OrdenTrabajoDaoImpl();
+        listaOT = dao.listarTodo();
         return SUCCESS;
     }
 }

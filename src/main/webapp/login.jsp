@@ -18,7 +18,7 @@
         <s:form action="login">           
             <s:textfield key="formulario.username" name="usuario.username"/>
             <s:password key="formulario.password" name="usuario.password"/>
-            <s:submit   key="formulario.boton" />
+            <s:submit value="%{getText('formulario.boton')}"/>
         </s:form>
         
         <s:actionerror/>

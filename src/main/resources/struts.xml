@@ -69,5 +69,32 @@
             <result name="input" type="tiles">d_modificar_OT</result>
         </action>
         
+        <action name="inicioAsignarOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="iniciarAsignacionOT">
+            <result type="tiles">d_inicioAsignar_OT</result>
+            <result name="input" type="tiles">d_inicioAsignar_OT</result>
+        </action>
+        
+        <action name="modificarEstadoOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="getasignarOT">
+            <result type="tiles">d_registroEstado_OT</result>
+            <result name="error" type="tiles">d_inicioAsignar_OT</result>
+        </action>
+        
+        <action name="AsignarOT"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="asignarOT">
+            <result type="tiles">d_inicioAsignar_OT</result>
+            <result name="error" type="tiles">d_inicioAsignar_OT</result>
+        </action>
+        
+        <action name="ListaAsignaciones"
+                 class="com.llamagas.sisotra.action.OrdenTrabajoAction" 
+                 method="ListarOT">
+            <result type="tiles">d_ListaAsignaciones_OT</result>
+            <result name="input" type="tiles">d_REGISTRO_OT</result>
+        </action>
     </package>
 </struts>
