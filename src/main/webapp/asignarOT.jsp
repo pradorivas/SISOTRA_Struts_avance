@@ -7,7 +7,10 @@
     </head>
     <body><center>
         <h2><s:text name="titulo.asignaciones"/></h2>
-    
+        <s:if test="listaOT.isEmpty()">
+            No hay datos
+        </s:if>
+        <s:else>
             <table border="1">
                 <thead>
                     <tr>
@@ -32,6 +35,7 @@
                         </tr>
                 </s:iterator>
             </table>
+        </s:else>
         <br>
         <br></center>
 </body>

@@ -5,8 +5,8 @@
         <s:url action="logout" id="salir"/>
         <s:a href="%{salir}"><s:text name="enlace.logout"/> </s:a>
     </li>
-    <s:set var="cod" value="%#sesion.get('user')" scope="page"/>
-    <s:if test="%{#attr.cod=='jefeflota' || #attr.cod=='admin'}">
+    <!--<:set var="cod" value="%#sesion.get('user')" scope="page"/>-->
+    <s:if test="#session.user.equals('jefeflota') || #session.user.equals('admin')">
     <li> 
         <s:url action="inicioRegistroOT" id="newOT"/>
         <s:a href="%{newOT}"><s:text name="enlace.OTnuevo"/></s:a>
@@ -16,7 +16,7 @@
         <s:a href="%{newLista_ot}"><s:text name="enlace.OT.listado"/></s:a>
     </li>
     </s:if>
-    <s:if test="usuario.username=='jefetaller' || usuario.username=='admin'">
+    <s:if test="#session.user.equals('jefetaller') || #session.user.equals('admin')">
     <li>
         <s:url action="inicioAsignarOT" id="newAsigna_ot"/>
         <s:a href="%{newAsigna_ot}"><s:text name="enlace.OT.asignarOT"/></s:a>
